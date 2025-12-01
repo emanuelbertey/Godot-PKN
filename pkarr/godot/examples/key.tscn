@@ -1,0 +1,172 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdfm405ocjf7f"]
+
+[ext_resource type="Script" uid="uid://cxqdpced3y6gx" path="res://pkarr-godot/pkarr/godot/examples/key.gd" id="1_up4cr"]
+
+[node name="key" type="Control" unique_id=1590436353]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_up4cr")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1611837372]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 1172.0
+offset_bottom = 713.0
+color = Color(0.5926938, 0.6155529, 0.96713036, 1)
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=207344878]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 20.0
+offset_right = 376.0
+offset_bottom = 191.0
+
+[node name="create key" type="Button" parent="GridContainer" unique_id=1025427468]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "create key"
+
+[node name="npub_hex" type="Button" parent="GridContainer" unique_id=2117153708]
+layout_mode = 2
+text = "npub"
+
+[node name="nsec_hex" type="Button" parent="GridContainer" unique_id=1715524904]
+layout_mode = 2
+text = "nsec"
+
+[node name="hex_npub" type="Button" parent="GridContainer" unique_id=1153419277]
+layout_mode = 2
+text = "hex nsec"
+
+[node name="hex_nsec" type="Button" parent="GridContainer" unique_id=550707844]
+layout_mode = 2
+text = "hex npub"
+
+[node name="GridContainer2" type="GridContainer" parent="." unique_id=43515796]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 338.00003
+offset_right = 634.88806
+offset_bottom = 474.00003
+scale = Vector2(1.385, 1.385)
+
+[node name="nsec" type="LineEdit" parent="GridContainer2" unique_id=1682966311]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "nsec"
+editable = false
+
+[node name="npub" type="LineEdit" parent="GridContainer2" unique_id=232622578]
+layout_mode = 2
+placeholder_text = "npub"
+editable = false
+
+[node name="hex_sec" type="LineEdit" parent="GridContainer2" unique_id=186510738]
+layout_mode = 2
+placeholder_text = "hex_sec"
+editable = false
+
+[node name="hex_pub" type="LineEdit" parent="GridContainer2" unique_id=754357309]
+layout_mode = 2
+placeholder_text = "hex_pub"
+editable = false
+
+[node name="resolve" type="GridContainer" parent="." unique_id=944397145]
+layout_mode = 0
+offset_left = 431.0
+offset_top = 25.0
+offset_right = 794.0
+offset_bottom = 165.0
+
+[node name="hex_to_nsec" type="Button" parent="resolve" unique_id=1387376901]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "hex_to_nsec"
+
+[node name="hex_to_npub" type="Button" parent="resolve" unique_id=1454405953]
+layout_mode = 2
+text = "hex_to_npub"
+
+[node name="npub_to_hex" type="Button" parent="resolve" unique_id=1912152443]
+layout_mode = 2
+text = "npub_to_hex"
+
+[node name="nsec_to_hex" type="Button" parent="resolve" unique_id=1814762740]
+layout_mode = 2
+text = "nsec_to_hex"
+
+[node name="enter" type="LineEdit" parent="." unique_id=752604112]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 219.0
+offset_right = 833.0
+offset_bottom = 270.0
+placeholder_text = "npub/nsec/hex"
+alignment = 1
+
+[node name="out" type="LineEdit" parent="." unique_id=1709435993]
+layout_mode = 1
+offset_left = 40.0
+offset_top = 283.0
+offset_right = 837.0
+offset_bottom = 336.5
+placeholder_text = "result"
+alignment = 1
+editable = false
+
+[node name="quit" type="Button" parent="." unique_id=312628255]
+layout_mode = 0
+offset_left = 847.0
+offset_top = 9.0
+offset_right = 879.0
+offset_bottom = 40.0
+text = "x"
+
+[node name="buscar" type="GridContainer" parent="." unique_id=454229754]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 0
+offset_left = 39.0
+offset_top = 538.0
+offset_right = 856.0
+offset_bottom = 578.0
+
+[node name="LineEdit" type="LineEdit" parent="buscar" unique_id=1164479671]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "busca de 4 a 8                "
+max_length = 8
+
+[node name="line search" type="HBoxContainer" parent="buscar" unique_id=1982887440]
+layout_mode = 2
+
+[node name="buscar" type="Button" parent="buscar/line search" unique_id=106845538]
+layout_mode = 2
+text = "buscar"
+
+[node name="MarginContainer" type="MarginContainer" parent="buscar/line search" unique_id=808920614]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="buscar/line search" unique_id=557475300]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+
+[node name="intline" type="LineEdit" parent="buscar/line search" unique_id=323022074]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "ingrese numero"
+
+[connection signal="pressed" from="GridContainer/create key" to="." method="_on_create_key_pressed"]
+[connection signal="pressed" from="GridContainer/npub_hex" to="." method="_on_npub_hex_pressed"]
+[connection signal="pressed" from="GridContainer/nsec_hex" to="." method="_on_nsec_hex_pressed"]
+[connection signal="pressed" from="GridContainer/hex_npub" to="." method="_on_hex_npub_pressed"]
+[connection signal="pressed" from="GridContainer/hex_nsec" to="." method="_on_hex_nsec_pressed"]
+[connection signal="pressed" from="resolve/hex_to_nsec" to="." method="_on_hex_to_nsec_pressed"]
+[connection signal="pressed" from="resolve/hex_to_npub" to="." method="_on_hex_to_npub_pressed"]
+[connection signal="pressed" from="resolve/npub_to_hex" to="." method="_on_npub_to_hex_pressed"]
+[connection signal="pressed" from="resolve/nsec_to_hex" to="." method="_on_nsec_to_hex_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="buscar/line search/buscar" to="." method="_on_buscar_pressed"]
