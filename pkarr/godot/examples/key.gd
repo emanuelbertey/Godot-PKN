@@ -5,6 +5,18 @@ var nsec
 var hex_npub
 var hex_nsec
 var peer
+
+const CHARS: String = "023456789acdefghjklmnpqrstuvwxyz"
+
+func is_valid(s: String) -> bool:
+	for c in s:
+		if not CHARS.contains(c):
+			return false
+	return true
+
+
+
+
 func _ready() -> void:
 	peer = Keyl.new()
 
@@ -94,19 +106,36 @@ func _on_hex_nsec_pressed() -> void:
 
 
 func search(compare_string: String) -> bool:
+	
 	var longer = compare_string.length()
-	if longer < 4 or longer > 8:
-		prints("error ingrese longitud valida")
 	var numline = int($"buscar/line search/intline".text)
+	
+	if longer < 4 or longer > 32:
+		prints("error ingrese longitud valida")
+	
+	if is_valid(compare_string):
+		prints("buscando alias de inicio")
+	
+	else:
+		compare_string = "no cumple con los caracteres"
+		push_error(compare_string)
+		print_debug(compare_string)
+		return false
+	
+	
 	if numline < 100 :
 		numline = 100
 	for i in numline:
 		createkey()
-		await get_tree().create_timer(0.05).timeout
+		if i % 1000 == 0:
+			#prints("100")
+			$buscar/LineEdit/count.text = str(i)
+			#await get_tree().create_timer(0.5).timeout
 		var prefix = peer.to_nsec(global_key).substr(0, 10)
 		# Comparamos con el string de referencia
 		if prefix == compare_string:
 			return true
+	
 	return false
 
 
@@ -156,5 +185,10 @@ func _on_quit_pressed() -> void:
 
 
 func _on_buscar_pressed() -> void:
-	search($buscar/LineEdit.text)
+	
+	var result = await search($buscar/LineEdit.text)
+	if result:
+		$"buscar/line search/result_line".text = nsec
+	else:
+		prints("no se encontro coincidencia en la busqueda")
 	pass # Replace with function body.

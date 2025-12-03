@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdfm405ocjf7f"]
+[gd_scene load_steps=2 format=3 uid="uid://citsyhsonjuig"]
 
-[ext_resource type="Script" uid="uid://cxqdpced3y6gx" path="res://pkarr-godot/pkarr/godot/examples/key.gd" id="1_up4cr"]
+[ext_resource type="Script" uid="uid://btq86wqfwdexv" path="res://pkarr/godot/examples/key.gd" id="1_up4cr"]
 
-[node name="key" type="Control"]
+[node name="key" type="Control" unique_id=2040629945]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,42 +11,42 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_up4cr")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1777565901]
 layout_mode = 1
 anchors_preset = -1
 offset_right = 1172.0
 offset_bottom = 713.0
 color = Color(0.5926938, 0.6155529, 0.96713036, 1)
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1108055567]
 layout_mode = 0
 offset_left = 14.0
 offset_top = 20.0
 offset_right = 376.0
 offset_bottom = 191.0
 
-[node name="create key" type="Button" parent="GridContainer"]
+[node name="create key" type="Button" parent="GridContainer" unique_id=597929105]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "create key"
 
-[node name="npub_hex" type="Button" parent="GridContainer"]
+[node name="npub_hex" type="Button" parent="GridContainer" unique_id=1005047410]
 layout_mode = 2
 text = "npub"
 
-[node name="nsec_hex" type="Button" parent="GridContainer"]
+[node name="nsec_hex" type="Button" parent="GridContainer" unique_id=1264790839]
 layout_mode = 2
 text = "nsec"
 
-[node name="hex_npub" type="Button" parent="GridContainer"]
+[node name="hex_npub" type="Button" parent="GridContainer" unique_id=703626969]
 layout_mode = 2
 text = "hex nsec"
 
-[node name="hex_nsec" type="Button" parent="GridContainer"]
+[node name="hex_nsec" type="Button" parent="GridContainer" unique_id=1694122930]
 layout_mode = 2
 text = "hex npub"
 
-[node name="GridContainer2" type="GridContainer" parent="."]
+[node name="GridContainer2" type="GridContainer" parent="." unique_id=847914646]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 356.00003
@@ -54,52 +54,52 @@ offset_right = 632.88806
 offset_bottom = 492.00003
 scale = Vector2(1.385, 1.385)
 
-[node name="nsec" type="LineEdit" parent="GridContainer2"]
+[node name="nsec" type="LineEdit" parent="GridContainer2" unique_id=1087667262]
 layout_mode = 2
 size_flags_horizontal = 3
 placeholder_text = "nsec"
 editable = false
 
-[node name="npub" type="LineEdit" parent="GridContainer2"]
+[node name="npub" type="LineEdit" parent="GridContainer2" unique_id=1503787956]
 layout_mode = 2
 placeholder_text = "npub"
 editable = false
 
-[node name="hex_sec" type="LineEdit" parent="GridContainer2"]
+[node name="hex_sec" type="LineEdit" parent="GridContainer2" unique_id=144407653]
 layout_mode = 2
 placeholder_text = "hex_sec"
 editable = false
 
-[node name="hex_pub" type="LineEdit" parent="GridContainer2"]
+[node name="hex_pub" type="LineEdit" parent="GridContainer2" unique_id=1350032630]
 layout_mode = 2
 placeholder_text = "hex_pub"
 editable = false
 
-[node name="resolve" type="GridContainer" parent="."]
+[node name="resolve" type="GridContainer" parent="." unique_id=16943802]
 layout_mode = 0
 offset_left = 431.0
 offset_top = 37.0
 offset_right = 794.0
 offset_bottom = 177.0
 
-[node name="hex_to_nsec" type="Button" parent="resolve"]
+[node name="hex_to_nsec" type="Button" parent="resolve" unique_id=1352383232]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "hex_to_nsec"
 
-[node name="hex_to_npub" type="Button" parent="resolve"]
+[node name="hex_to_npub" type="Button" parent="resolve" unique_id=1275764737]
 layout_mode = 2
 text = "hex_to_npub"
 
-[node name="npub_to_hex" type="Button" parent="resolve"]
+[node name="npub_to_hex" type="Button" parent="resolve" unique_id=946142642]
 layout_mode = 2
 text = "npub_to_hex"
 
-[node name="nsec_to_hex" type="Button" parent="resolve"]
+[node name="nsec_to_hex" type="Button" parent="resolve" unique_id=1202828378]
 layout_mode = 2
 text = "nsec_to_hex"
 
-[node name="enter" type="LineEdit" parent="."]
+[node name="enter" type="LineEdit" parent="." unique_id=1102655125]
 layout_mode = 0
 offset_left = 40.0
 offset_top = 219.0
@@ -108,7 +108,7 @@ offset_bottom = 270.0
 placeholder_text = "npub/nsec/hex"
 alignment = 1
 
-[node name="out" type="LineEdit" parent="."]
+[node name="out" type="LineEdit" parent="." unique_id=2144007204]
 layout_mode = 1
 offset_left = 40.0
 offset_top = 283.0
@@ -118,7 +118,7 @@ placeholder_text = "result"
 alignment = 1
 editable = false
 
-[node name="quit" type="Button" parent="."]
+[node name="quit" type="Button" parent="." unique_id=1690792108]
 layout_mode = 0
 offset_left = 847.0
 offset_top = 9.0

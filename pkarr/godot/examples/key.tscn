@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bdfm405ocjf7f"]
 
-[ext_resource type="Script" uid="uid://cxqdpced3y6gx" path="res://pkarr-godot/pkarr/godot/examples/key.gd" id="1_up4cr"]
+[ext_resource type="Script" uid="uid://btq86wqfwdexv" path="res://pkarr/godot/examples/key.gd" id="1_up4cr"]
 
 [node name="key" type="Control" unique_id=1590436353]
 layout_mode = 3
@@ -137,8 +137,15 @@ offset_bottom = 578.0
 [node name="LineEdit" type="LineEdit" parent="buscar" unique_id=1164479671]
 layout_mode = 2
 size_flags_horizontal = 3
-placeholder_text = "busca de 4 a 8                "
+placeholder_text = "busca de 4 a 32                "
 max_length = 8
+
+[node name="count" type="Label" parent="buscar/LineEdit" unique_id=522021167]
+layout_mode = 0
+offset_left = 697.0
+offset_top = 3.0
+offset_right = 824.0
+offset_bottom = 34.0
 
 [node name="line search" type="HBoxContainer" parent="buscar" unique_id=1982887440]
 layout_mode = 2
@@ -150,9 +157,10 @@ text = "buscar"
 [node name="MarginContainer" type="MarginContainer" parent="buscar/line search" unique_id=808920614]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="buscar/line search" unique_id=557475300]
+[node name="result_line" type="LineEdit" parent="buscar/line search" unique_id=25190821]
 custom_minimum_size = Vector2(600, 0)
 layout_mode = 2
+placeholder_text = "use caracteres  \"023456789acdefghjklmnpqrstuvwxyz\""
 
 [node name="intline" type="LineEdit" parent="buscar/line search" unique_id=323022074]
 layout_mode = 2

@@ -1,6 +1,6 @@
 extends Control
-var pkarr = preload("res://pkarr-godot/pkarr/godot/examples/pkarr.tscn")
-var key_nostr = preload("res://pkarr-godot/pkarr/godot/examples/key.tscn")
+var pkarr = preload("res://pkarr/godot/examples/pkarr.tscn")
+var key_nostr = preload("res://pkarr/godot/examples/key.tscn")
 var data = {}
 #const SAVE_DIR = "res://saves/"
 var platform
@@ -70,7 +70,7 @@ func _on_pkarr_pressed() -> void:
 	#pkarr.instantiate()
 	#add_child(pkarr)
 	
-	var menu = preload("res://pkarr-godot/pkarr/godot/examples/pkarr.tscn").instantiate()
+	var menu = preload("res://pkarr/godot/examples/pkarr.tscn").instantiate()
 	add_child(menu)
 	prints("instancio escena")
 	await get_tree().create_timer(3).timeout

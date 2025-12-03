@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2qb1lhdrail3"]
+[gd_scene load_steps=4 format=3 uid="uid://c2qb1lhdrail3"]
 
-[ext_resource type="Script" uid="uid://hdes3tufbpqi" path="res://pkarr-godot/pkarr/godot/examples/control.gd" id="1_0fbet"]
-[ext_resource type="Script" uid="uid://byabejwsxg1t3" path="res://pkarr-godot/pkarr/godot/examples/button_3.gd" id="2_62e2m"]
-[ext_resource type="Texture2D" uid="uid://dcvpakna8i04d" path="res://godot-rust.png" id="2_202ya"]
+[ext_resource type="Script" uid="uid://cbmm4qplwm12h" path="res://pkarr/godot/examples/control.gd" id="1_0fbet"]
+[ext_resource type="Script" uid="uid://b1hvxmg5qhl1e" path="res://pkarr/godot/examples/button_3.gd" id="2_62e2m"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_202ya"]
 bg_color = Color(0.84209746, 0.5075795, 0.20788595, 1)
@@ -23,17 +22,6 @@ layout_mode = 1
 offset_right = 918.0
 offset_bottom = 664.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_202ya")
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=643873974]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-offset_top = -8.0
-offset_right = 909.0
-offset_bottom = 652.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_202ya")
 
 [node name="Peerinfo" type="PkarrGodot" parent="." unique_id=1398557453]
 

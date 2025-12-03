@@ -1,17 +1,17 @@
 //use godot::classes::Sprite2D;
 use godot::prelude::*;
-use godot::classes::{Node, RandomNumberGenerator, FileAccess};
-use godot::classes::file_access::ModeFlags;
-use godot::builtin::{PackedByteArray, StringName, GString};
+use godot::classes::{Node};
+//use godot::classes::file_access::ModeFlags;
+use godot::builtin::{PackedByteArray, GString};
 use bech32::{ToBase32, Variant};
-use secp256k1::{KeyPair, Secp256k1, XOnlyPublicKey,SecretKey};// determinar esto 
+use secp256k1::{KeyPair, Secp256k1};// determinar esto 
 
 /*es prueba mada mas */
 use nostr::{
-    prelude::{hex::ToHex, FromBech32, ToBech32},
+    prelude::{hex::ToHex, FromBech32, ToBech32}
   //  secp256k1::{SecretKey, XOnlyPublicKey},
 
-    EventId,
+  //  EventId,
 };
 use std::str::FromStr;
 use nostr::key::XOnlyPublicKey as NostrXOnlyPublicKey;
@@ -149,7 +149,7 @@ pub fn to_nsec(&self, secret: PackedByteArray) -> GString {
 
     match bech32::encode("nsec", key_bytes.to_base32(), Variant::Bech32) {
         Ok(encoded) => {
-        godot_print!("✅ nsec codificado: {}", encoded); 
+       // godot_print!("✅ nsec codificado: {}", encoded); 
         GString::from(&encoded)
         }
         Err(e) => {
@@ -185,7 +185,7 @@ pub fn to_npub(&self, secret: PackedByteArray) -> GString {
 
     match bech32::encode("npub", pubkey.serialize().to_base32(), Variant::Bech32) {
         Ok(encoded) => {
-        godot_print!("✅ npub codificado: {}", encoded); 
+        //godot_print!("✅ npub codificado: {}", encoded); 
         GString::from(&encoded)
         }
         Err(e) => {

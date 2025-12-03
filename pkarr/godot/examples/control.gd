@@ -120,4 +120,5 @@ func _on_save_key_pressed() -> void:
 func _on_time_ttl_value_changed(value: float) -> void:
 	time_ttl = int(value)
 	$count_timer.text = str(value)
+	prints("cargo ttl : " , time_ttl)
 	pass # Replace with function body.

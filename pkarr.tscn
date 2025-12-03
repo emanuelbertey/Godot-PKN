@@ -1,13 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2qb1lhdrail3"]
+[gd_scene load_steps=4 format=3 uid="uid://btg7yko4ue27p"]
 
-[ext_resource type="Script" uid="uid://hdes3tufbpqi" path="res://pkarr-godot/pkarr/godot/examples/control.gd" id="1_0fbet"]
-[ext_resource type="Script" uid="uid://byabejwsxg1t3" path="res://pkarr-godot/pkarr/godot/examples/button_3.gd" id="2_62e2m"]
-[ext_resource type="Texture2D" uid="uid://dcvpakna8i04d" path="res://godot-rust.png" id="2_202ya"]
+[ext_resource type="Script" uid="uid://cbmm4qplwm12h" path="res://pkarr/godot/examples/control.gd" id="1_n7jn1"]
+[ext_resource type="Script" uid="uid://b1hvxmg5qhl1e" path="res://pkarr/godot/examples/button_3.gd" id="2_og4c5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_202ya"]
 bg_color = Color(0.84209746, 0.5075795, 0.20788595, 1)
 
-[node name="pkarr" type="Control"]
+[node name="pkarr" type="Control" unique_id=1038318578]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,28 +15,17 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1_0fbet")
+script = ExtResource("1_n7jn1")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=601691265]
 layout_mode = 1
 offset_right = 918.0
 offset_bottom = 664.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_202ya")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-offset_top = -8.0
-offset_right = 909.0
-offset_bottom = 652.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_202ya")
+[node name="Peerinfo" type="PkarrGodot" parent="." unique_id=268737001]
 
-[node name="Peerinfo" type="Peerinfo" parent="."]
-
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1273162001]
 layout_mode = 0
 offset_left = 638.0
 offset_top = 3.0
@@ -47,14 +35,14 @@ text = "
 "
 autowrap_mode = 3
 
-[node name="publicar" type="Label" parent="."]
+[node name="publicar" type="Label" parent="." unique_id=298481416]
 layout_mode = 0
 offset_left = 34.0
 offset_top = 442.0
 offset_right = 362.0
 offset_bottom = 465.0
 
-[node name="Label3" type="Label" parent="."]
+[node name="Label3" type="Label" parent="." unique_id=280443580]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 454.0
@@ -62,36 +50,36 @@ offset_right = 809.0
 offset_bottom = 511.0
 text_overrun_behavior = 2
 
-[node name="resolver" type="Button" parent="."]
+[node name="resolver" type="Button" parent="." unique_id=1328252152]
 layout_mode = 0
 offset_right = 151.0
 offset_bottom = 95.0
 text = "resolver"
 
-[node name="pubicar" type="Button" parent="."]
+[node name="pubicar" type="Button" parent="." unique_id=1652166277]
 layout_mode = 0
 offset_left = 166.0
 offset_right = 312.0
 offset_bottom = 93.0
 text = "publish"
 
-[node name="Button3" type="Button" parent="."]
+[node name="Button3" type="Button" parent="." unique_id=1601935069]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 104.0
 offset_right = 50.0
 offset_bottom = 135.0
 text = "hola"
-script = ExtResource("2_62e2m")
+script = ExtResource("2_og4c5")
 
-[node name="Label" type="Label" parent="Button3"]
+[node name="Label" type="Label" parent="Button3" unique_id=1637419116]
 layout_mode = 0
 offset_left = 51.0
 offset_right = 74.0
 offset_bottom = 29.0
 text = "0"
 
-[node name="CodeEdit" type="CodeEdit" parent="."]
+[node name="CodeEdit" type="CodeEdit" parent="." unique_id=1016383395]
 layout_mode = 0
 offset_left = 94.0
 offset_top = 163.0
@@ -100,7 +88,7 @@ offset_bottom = 216.0
 text = "tkucztxt7xhrb41miqb7xknhijngpgy7tyhete15ycok7naaonsy"
 placeholder_text = "public key"
 
-[node name="mode" type="CodeEdit" parent="."]
+[node name="mode" type="CodeEdit" parent="." unique_id=767554521]
 layout_mode = 0
 offset_left = 5.0
 offset_top = 163.0
@@ -109,7 +97,7 @@ offset_bottom = 219.0
 text = "dht"
 placeholder_text = "\"dht\" or \"relays\""
 
-[node name="clave" type="LineEdit" parent="."]
+[node name="clave" type="LineEdit" parent="." unique_id=1492077889]
 layout_mode = 0
 offset_left = 41.0
 offset_top = 252.0
@@ -118,7 +106,7 @@ offset_bottom = 328.0
 text = "Godot"
 placeholder_text = "clave de la llave"
 
-[node name="valor" type="LineEdit" parent="."]
+[node name="valor" type="LineEdit" parent="." unique_id=1766222250]
 layout_mode = 0
 offset_left = 45.0
 offset_top = 341.0
@@ -127,7 +115,7 @@ offset_bottom = 413.0
 text = "Pkarr_in_rust"
 placeholder_text = "valor de llave"
 
-[node name="exit" type="Button" parent="."]
+[node name="exit" type="Button" parent="." unique_id=2063329309]
 layout_mode = 0
 offset_left = 382.0
 offset_top = -2.0
@@ -135,7 +123,7 @@ offset_right = 520.0
 offset_bottom = 74.0
 text = "exit"
 
-[node name="crea key" type="Button" parent="."]
+[node name="crea key" type="Button" parent="." unique_id=785111919]
 layout_mode = 0
 offset_left = 400.0
 offset_top = 88.0
@@ -143,7 +131,7 @@ offset_right = 477.0
 offset_bottom = 119.0
 text = "crea key "
 
-[node name="save key" type="Button" parent="."]
+[node name="save key" type="Button" parent="." unique_id=1148895085]
 layout_mode = 0
 offset_left = 401.0
 offset_top = 129.0
@@ -151,7 +139,6 @@ offset_right = 475.0
 offset_bottom = 160.0
 text = "save key"
 
-[connection signal="resolv" from="Peerinfo" to="." method="_on_peerinfo_resolv"]
 [connection signal="pressed" from="resolver" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="pubicar" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]

@@ -6,8 +6,8 @@ reloadable = true
 [libraries]
 linux.debug.x86_64 =     "target/debug/libpkarr.so"
 linux.release.x86_64 =   "target/release/libpkarr.so"
-windows.debug.x86_64 =   "target/debug/libpkarr.dll"
-windows.release.x86_64 = "target/release/libpkarr.dll"
+windows.debug.x86_64 =   "pkarr/godot/target/debug/libpkarr.dll"
+windows.release.x86_64 = "pkarr/godot/target/release/libpkarr.dll"
 macos.debug =            "target/debug/libpkarr.dylib"
 macos.release =          "target/release/libpkarr.dylib"
 macos.debug.arm64 =      "target/debug/libpkarr.dylib"
